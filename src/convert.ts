@@ -45,7 +45,7 @@ export async function convert(xmls: string, out: NodeJS.WritableStream, options:
 
 	for (let [para, se] of ses) {
 
-		let wid = 0;
+		let wid = 1;
 
 		const pid = para.getAttribute('id');
 		const lang = se.getAttribute('lang');
@@ -69,6 +69,9 @@ export async function convert(xmls: string, out: NodeJS.WritableStream, options:
 			upos || '_',
 			xpos || '_',
 			feats && Object.entries(feats).map(pair => pair.join('=')).join('|') || '_',
+			'_', // head
+			'_', // deprel
+			'_', // deps
 			(orig || '_') + (debug ? '\t' + JSON.stringify(debug) : ''),
 		].join('\t') + '\n');
 
