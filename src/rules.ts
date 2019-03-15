@@ -46,6 +46,7 @@ export const rules: Rule[] = [
 	['acc2', { Case: 'Nom' }],
 	['loc2', { Case: 'Loc' }],
 	['adnum', { Case: 'Gen' }],
+	['ill', { Case: 'Ill' }],
 	
 	
 	[
@@ -53,6 +54,9 @@ export const rules: Rule[] = [
 		{ UPOS: 'ADJ' }
 	],
 
+	['indef', { Definite: 'Ind' }],
+	['def', { Definite: 'Def' }],
+	
 	['m', { Gender: 'Masc' }],
 	['f', { Gender: 'Fem' }],
 	['n', { Gender: 'Neut' }],
@@ -73,7 +77,7 @@ export const rules: Rule[] = [
 	
 	['comp', { Degree: 'Comp' }],
 	['comp2', { Degree: 'Comp' }],
-	['supr', { Degree: 'Sup' }],
+	['super', { Degree: 'Sup' }],
 
 	
 	
@@ -82,6 +86,28 @@ export const rules: Rule[] = [
 		{ UPOS: 'NUM' }
 	],
 
+	['card', { NumType: 'Card' }],
+	['ord', { NumType: 'Ord' }],
+	['coll', { Gender: 'Sets' }],	
+	
+	['indef', { Definite: 'Ind' }],
+	['def', { Definite: 'Def' }],
+	
+	['m', { Gender: 'Masc' }],
+	['f', { Gender: 'Fem' }],
+	['n', { Gender: 'Neut' }],
+
+	['sg', { Number: 'Sing' }],
+	['pl', { Number: 'Plur' }],
+	
+	['nom', { Case: 'Nom' }],
+	['gen', { Case: 'Gen' }],
+	['dat', { Case: 'Dat' }],
+	['acc', { Case: 'Acc' }],
+	['ins', { Case: 'Ins' }],
+	['loc', { Case: 'Loc' }],
+	['voc', { Case: 'Voc' }],
+	
 	[
 		'ANUM',
 		{ UPOS: 'ADJ' }
@@ -91,6 +117,58 @@ export const rules: Rule[] = [
 		'V',
 		{ UPOS: 'VERB' }
 	],
+
+	['neg', { Polarity: 'Neg' }],
+	
+	['refl', { Reflex: 'Yes' }],
+	
+	['pf', { Aspect: 'Perf' }],
+	['ipf', { Aspect: 'Imp' }],
+	
+	['act', { Voice: 'Act' }],
+	['pass', { Voice: 'Pass' }],
+	['med', { Voice: 'Med' }],
+	['debit', { Voice: 'Necess' }],
+
+	['inf', { VerbForm: 'Inf' }],
+	['partcp', { VerbForm: 'part' }],
+	['pf', { Aspect: 'Perf' }],
+	['ger', { Aspect: 'Conv' }],
+	
+	['indic', { Mood: 'Ind' }],
+	['imper', { Mood: 'Imp' }],
+	['imper2', { Mood: 'Imp' }],
+	['cond', { Mood: 'Cnd' }],
+	['deb', { Mood: 'Nec' }],
+	['quot', { Mood: 'Qot' }],
+	
+	['praet', { Tense: 'Past' }],
+	['praes', { Tense: 'Pres' }],
+	['fut', { Tense: 'Fut' }],
+	['hab', { Tense: 'PastIter' }],
+	
+	['1p', { Person: '1' }],
+	['2p', { Person: '2' }],
+	['3p', { Person: '3' }],
+	
+	['indef', { Definite: 'Ind' }],
+	['def', { Definite: 'Def' }],
+	
+	['sg', { Number: 'Sing' }],
+	['pl', { Number: 'Plur' }],
+	['du', { Number: 'Dual' }],
+	
+	['nom', { Case: 'Nom' }],
+	['gen', { Case: 'Gen' }],
+	['dat', { Case: 'Dat' }],
+	['acc', { Case: 'Acc' }],
+	['ins', { Case: 'Ins' }],
+	['loc', { Case: 'Loc' }],
+	['voc', { Case: 'Voc' }],
+	
+	['m', { Gender: 'Masc' }],
+	['f', { Gender: 'Fem' }],
+	['n', { Gender: 'Neut' }],
 	
 	[
 		'SPRO',
@@ -112,6 +190,39 @@ export const rules: Rule[] = [
 	[
 		'ADVPRO',
 		{ UPOS: 'ADV' }
+	],
+
+	[
+		'PRO',
+		{ UPOS: 'PRON' }
+	],
+	
+	['indef', { Definite: 'Ind' }],
+	['def', { Definite: 'Def' }],
+	
+	['m', { Gender: 'Masc' }],
+	['f', { Gender: 'Fem' }],
+	['n', { Gender: 'Neut' }],
+
+	['sg', { Number: 'Sing' }],
+	['pl', { Number: 'Plur' }],
+	
+	['nom', { Case: 'Nom' }],
+	['gen', { Case: 'Gen' }],
+	['dat', { Case: 'Dat' }],
+	['acc', { Case: 'Acc' }],
+	['ins', { Case: 'Ins' }],
+	['loc', { Case: 'Loc' }],
+	['voc', { Case: 'Voc' }],
+	
+	[
+		'PR',
+		{ UPOS: 'ADP' }
+	],
+
+	[
+		'CONJ',
+		{ UPOS: 'SCONJ' }
 	],
 
 	
