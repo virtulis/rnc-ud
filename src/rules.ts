@@ -131,9 +131,8 @@ export const rules: Rule[] = [
 	['debit', { Voice: 'Necess' }],
 
 	['inf', { VerbForm: 'Inf' }],
-	['partcp', { VerbForm: 'part' }],
-	['pf', { Aspect: 'Perf' }],
-	['ger', { Aspect: 'Conv' }],
+	['partcp', { VerbForm: 'Part' }],
+	['ger', { VerbForm: 'Conv' }],
 	
 	['indic', { Mood: 'Ind' }],
 	['imper', { Mood: 'Imp' }],
