@@ -58,7 +58,6 @@ export async function convert(xmls: string, out: NodeJS.WritableStream, options:
 			form: string,
 			lemma: string | null = null,
 			upos: string | null = null,
-			xpos: string | null = null,
 			feats: Record<string, string> | null = null,
 			orig: string | null = null,
 			debug: any = null,
@@ -67,12 +66,12 @@ export async function convert(xmls: string, out: NodeJS.WritableStream, options:
 			form,
 			lemma,
 			upos || '_',
-			xpos || '_',
+			(orig || '_'),
 			feats && Object.entries(feats).map(pair => pair.join('=')).join('|') || '_',
 			'_', // head
 			'_', // deprel
 			'_', // deps
-			(orig || '_') + (debug ? '\t' + JSON.stringify(debug) : ''),
+			debug ? JSON.stringify(debug) : '_',
 		].join('\t') + '\n');
 
 		for (let node of Array.from(se.childNodes)) {
@@ -123,7 +122,6 @@ export async function convert(xmls: string, out: NodeJS.WritableStream, options:
 					}
 
 					const upos = feats.UPOS || null;
-					const xpos = feats.XPOS || null;
 					delete feats.UPOS;
 					delete feats.XPOS;
 
@@ -132,7 +130,6 @@ export async function convert(xmls: string, out: NodeJS.WritableStream, options:
 						form,
 						lemma,
 						upos,
-						xpos,
 						feats,
 						gr,
 						options.debug && { matched, partial, ignored, unseen }
